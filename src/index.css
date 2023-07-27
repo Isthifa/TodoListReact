@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.myform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.myform input{
+    margin-bottom: 20px;
+    height: 30px;
+    width: 300px;
+    border-radius: 3px;
+    border: 1px solid rgb(255, 255, 255);
+    text-align: center;
+}
+button{
+    height: 30px;
+    width: 60px;
+    margin-top: 10px;
+    border-radius: 3px;
+    border: 1px solid rgb(255, 255, 255);
+    color:black;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 4px 4px 0.1px #b9ceb9;
+}
+button:hover{
+    background-color: rgba(180, 202, 202, 0.808);
+    color: rgb(255, 255, 255);
+    box-shadow: 4px 4px 0.1px #b9ceb9;
+}
+
+
+.main{
+    display: flex;
+    width: 400px;
+    height: 250px;
+    flex-direction: column;
+    position: relative;
+    top: 11rem;
+    margin: auto;
+    background-color: #dce4dc;
+    color: #ffff; 
+    border-radius: 10px;
+    box-shadow: 4px 4px 0.1px #b9ceb9;
+}
+.main h1{
+        color: black;
+        font-size: 30px;
+        margin-bottom: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        position: relative;
+        top: -3rem;
+}
+.main .myform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1vh;
+    flex-direction: column;
+    
+}
+.main .myform input{
+    margin-bottom: 20px;
+    height: 30px;
+    width: 300px;
+    border-radius: 3px;
+    border: 1px solid rgb(255, 255, 255);
+    text-align: center;
+    position: relative;
+    top: 1rem;
+    box-shadow: 4px 4px 0.1px #b9ceb9;
+    border-radius: 5px solid #b9ceb9;
+    
+}
+.myform input:focus{
+   background-color: rgb(195, 238, 224);
+   outline-style: double;
+   outline-color: #dce4dc;
+}
+
+@media screen and (max-width: 768px)  {
+    .main{
+        width: 300px;
+        height: 250px;
+        top: 10rem;
+    }
+    .main h1{
+        font-size: 20px;
+        top: -2rem;
+    }
+    .main .myform input{
+        width: 200px;
+        top: 1rem;
+    }
+    .myform input:focus{
+        background-color: rgb(195, 238, 224);
+        outline-style: double;
+        outline-color: #dce4dc;
+     }
+    
+}
+
