@@ -6,7 +6,7 @@ import Data from "./components/Data";
 export default function App() {
     return (
         <div>
-          <NavBar />
+          {/* <NavBar /> */}
           <div className="main">
           <Data/>
           </div>

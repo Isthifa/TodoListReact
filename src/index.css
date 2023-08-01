@@ -8,30 +8,24 @@
     box-sizing: border-box;
 }
 
-.myform{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-}
-.myform input{
-    margin-bottom: 20px;
-    height: 30px;
-    width: 300px;
-    border-radius: 3px;
-    border: 1px solid rgb(255, 255, 255);
-    text-align: center;
-}
 button{
-    height: 30px;
+    height: 25px;
     width: 60px;
     margin-top: 10px;
     border-radius: 3px;
-    border: 1px solid rgb(255, 255, 255);
+    /* border: 1px solid rgb(255, 255, 255); */
     color:black;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
+    box-shadow: 4px 4px 0.1px #b9ceb9;
+
+}
+.mybutton{
+    position: relative;
+    top: -13.8rem;
+    left: 10rem;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
     box-shadow: 4px 4px 0.1px #b9ceb9;
 }
 button:hover{
@@ -44,24 +38,25 @@ button:hover{
 .main{
     display: flex;
     width: 400px;
-    height: 250px;
+    height: 200px;
     flex-direction: column;
     position: relative;
-    top: 11rem;
+    top: 9rem;
     margin: auto;
     background-color: #dce4dc;
     color: #ffff; 
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 4px 4px 0.1px #b9ceb9;
+    overflow: visible;
 }
 .main h1{
         color: black;
         font-size: 30px;
         margin-bottom: 20px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-family: monospace;
         text-align: center;
         position: relative;
-        top: -3rem;
+        top: -12rem;
 }
 .main .myform{
     display: flex;
@@ -79,7 +74,8 @@ button:hover{
     border: 1px solid rgb(255, 255, 255);
     text-align: center;
     position: relative;
-    top: 1rem;
+    top: -10.5rem;
+    left: -3rem;
     box-shadow: 4px 4px 0.1px #b9ceb9;
     border-radius: 5px solid #b9ceb9;
     
@@ -89,6 +85,48 @@ button:hover{
    outline-style: double;
    outline-color: #dce4dc;
 }
+ .main .itemsList{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top:-11rem;
+    color: black;
+    font-size: 20px;
+    font-family: monospace;
+    text-align: center;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: auto;
+  }
+  
+.itemsList ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    flex-direction: column;
+    position: relative;
+    top:-16rem;
+    color: black;
+    font-size: 20px;
+    font-family: monospace;
+    text-align: center;
+    overflow: scroll;
+
+}
+.main .itemsList li{
+    list-style: none;
+    margin-bottom: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 4px 4px 0.1px #b9ceb9;
+    background-color: #ffff;
+    overflow: hidden;
+}
 
 @media screen and (max-width: 768px)  {
     .main{
@@ -97,17 +135,23 @@ button:hover{
         top: 10rem;
     }
     .main h1{
+        font-family: monospace;
         font-size: 20px;
-        top: -2rem;
+        top: -12rem;
     }
     .main .myform input{
         width: 200px;
-        top: 1rem;
+        top: -10.5rem;
     }
     .myform input:focus{
         background-color: rgb(195, 238, 224);
         outline-style: double;
         outline-color: #dce4dc;
+     }
+     .main .mybutton{
+        top: -13.8rem;
+        left: 7rem;
+        
      }
     
 }

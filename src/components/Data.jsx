@@ -2,22 +2,32 @@ import React,{useState} from "react";
 import "../index.css";
 
 export default function Data() {
-    const [user, setUser] = useState({
-        fname: "",
-        lname: ""
-    });
+    const [inputtext, setInputext] = useState();
+    const [items, setItems] = useState([]);
+
 const inputEvent = (e) => {
-    setUser({...user,[e.target.name]:e.target.value})
+    setInputext(e.target.value);
 }
+const addItems = () => {
+    setItems((oldItems) => {
+        return [...oldItems, inputtext];
+    });
+    setInputext("");
+}
+console.log(inputtext);
 
     return (
        <div className="main">
-            <h1>Hello {user.fname} {user.lname}</h1>
-            <form className="myform">
-            <input type="text" name="fname" placeholder="Enter userName" onChange={(e)=>inputEvent(e)} />
-            <input type="text" name="lname" placeholder="Enter LastName" onChange={(e)=>inputEvent(e)}/>
-            <button type="submit">submit</button>
-            </form>
+            <h1>To-Do-List </h1>
+            <div className="myform">
+            <input type="text" value={inputtext} placeholder="Enter Tasks" onChange={inputEvent} />
+            <button className="mybutton" onClick={addItems}><span>Add</span></button>
+            </div>
+            <div className="itemsList">
+                <ul>
+                    {items.map(todoItem => <li>{todoItem}</li>)}
+                </ul>
+            </div>
        </div>
     )
 }
